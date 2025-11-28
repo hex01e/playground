@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: app-playground-container
-        image: hex01e/playground:v1
+        image: nginx:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 80
