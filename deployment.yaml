@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: app-playground
+  namespace: dev
+  labels:
+    app: app-playground
+
+spec:
+  selector:
+    matchLabels:
+      app: app-playground
+  template:
+    metadata:
+      labels:
+        app: app-playground
+    spec:
+      containers:
+      - name: app-playground-container
+        image: hex01e/playground:v1
+        ports:
+        - containerPort: 8080
